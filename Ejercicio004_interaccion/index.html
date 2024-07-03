@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interacción</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+        console.time();//Inicio del contador de tiempo
+        alert("Hola");
+        //Esta función nos muestra una ventana en la página web.
+        //message?: el argumento es opcional
+        //any: puede ser de cualquier tipo
+        //void: no tiene retorno, es decir, no se puede asignar el resultado de una función a
+        //ninguna variable
+        let nombre=prompt("¿Cómo te llamas", "Introduce tu nombre");
+        document.write("Te llamas ",nombre);
+        confirm("¿Quieres guardar el trabajo?");
+        console.time("proceso");
+        let respuesta=confirm("¿Quieres dormir la siesta?");
+        console.log(respuesta);
+        console.timeEnd("proceso");
+        console.warn(nombre,10,true);
+        //Genera una advertencia
+        console.info(nombre,10,true);
+        //Nos da información
+        console.error(nombre,10,true);
+        //Nos da error. Podemos ver errores, info o advertencias seleccionándolos en la pestaña
+        //de niveles predeterminados en la consola
+        console.timeEnd();//Fin del contador de tiempo --> muestra los ms de duración del contador
+        //time y timeEnd te da el tiempo que ha pasado desde que llamas a time y hasta que llega
+        //timeEnd. Sirve para ver cuánto tarda una función.
+</script>

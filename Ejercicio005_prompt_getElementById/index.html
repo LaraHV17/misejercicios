@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <script src="calculadoraIMC.js"></script>
+</head>
+<body>
+    <div id="nombre"></div>
+    <div id="altura"></div>
+    <div id="peso"></div>
+    <div id="imc"></div>
+</body>
+<script>
+    let nombre=prompt("¿Cómo te llamas?", "Introduce aquí tu nombre");
+    //Llamamos al id nombre.
+    document.getElementById("nombre").innerHTML=nombre;
+    //Con esto accedemos a la variable definida en HTML.
+    let altura=prompt("¿Cuánto mides?", "Introduce aquí tu altura");
+    document.getElementById("altura").innerHTML=altura;
+    let peso=prompt("¿Cuánto pesas?", "Introduce aquí tu peso");
+    document.getElementById("peso").innerHTML=peso;
+    let imc=calcularIMC(altura, peso);
+    document.getElementById("imc").innerHTML=imc;
+</script>
+</html>

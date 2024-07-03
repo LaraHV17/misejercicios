@@ -1,0 +1,25 @@
+#principal {
+    font-family: fantasy;
+    width: 160px;
+    background-color: rgb(230, 222, 236);
+    border: rgb(205, 170, 240) 2px solid;
+    border-radius: 4px;
+    padding: 5px;
+    /* Separa al div de la línea con la que hemos rodeado el div (nos da espacio hacia dentro) */
+    margin: auto;
+
+}
+
+.contenido {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2px;
+    /*Añade márgenes entre los div que hemos clasificado como contenido*/
+    text-align: center;
+    /*Centra todos los div de clase contenido*/
+}
+
+input {
+    padding: 5px;
+    /* Da un márgen a lo que se introduce en el div en la página web
+    Por ejemplo, que "Lara" tenga un margen con la cajita donde lo escribimos */
+}
