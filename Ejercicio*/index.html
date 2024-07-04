@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cuánto duraremos juntos?</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="añosJUNTOS.js"></script>
+</head>
+
+<body>
+    <div id="principal">
+        <div class="contenido">
+            <input type="text" name="" id="iNombre" placeholder="Nombre">
+        </div>
+        <div class="contenido">
+            <input type="number" name="" id="iQuerer" placeholder="¿Cuánto me quieres del 0 al 1000?">
+        </div>
+        <div class="contenido">
+            <input type="number" name="" id="iAños" placeholder="¿Desde hace cuánto me conoces?">
+        </div>
+        <div class="contenido">
+            <button onclick="calcular()">Calcular cuánto duraremos juntos en años</button>
+            <!-- Nos llama a la función calcular -- -->
+        </div>
+        <div id="resultado" class="contenido">
+            Resultado
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function calcular()
+    {
+        let nombre=document.getElementById("iNombre").value;
+        let querer=document.getElementById("iQuerer").value;
+        console.log(querer);
+        let años=document.getElementById("iAños").value;
+        console.log(años);
+        let tiempo=calcularTIEMPO(querer,años);
+        console.log(tiempo);
+        document.getElementById("resultado").innerHTML=imc;
+    }
+</script>
