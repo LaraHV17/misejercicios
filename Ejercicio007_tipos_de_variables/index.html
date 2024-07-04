@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de variables</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    /* let, var y n3=x son tres formas de declarar variables */
+    {
+        let n1 = 100;
+    }
+    /* Nos da error, n1 not defined porque esta variable solo existe en el ámbito del let*/
+    {
+        var n2 = 90;
+        var n2 = 8;
+    }
+    /* Nos muestra el último valor que le dimos a n2*/
+    {
+        n3 = 80;
+    }
+
+    //console.log(n1);
+    console.log(n2);
+    console.log(n3);
+    //Vamos a usar principalmente let
+    console.log(typeof (n2));
+    //typeof nos dice el tipo de variable que tenemos, en nuestro caso, sería number
+    typeof (n2);
+    document.write(typeof (n2));
+
+    let nombre1 = "Alba";
+    let nombre2 = new String("Fernando");
+    //Hemos creado un objeto o instancia nombre2 de clase String (letras), pero todos los objects
+    //creados así son tipo object
+    console.log(typeof nombre1);//nos dice que es un string
+    console.log(typeof nombre2);//nos dice que es un object
+    let r =nombre2.indexOf("r");
+    console.log(r);
+</script>
