@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validación de credenciales</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <input type="text" name="" id="iEmail" placeholder="Email">
+    <div class="container">
+            <input type="text" name="" id="iEmail" placeholder="Email">
+            <span class="error" id="error-email"></span>
+            <input type="password" name="" id="iContraseña" placeholder="Contraseña">
+            <span class="error" id="error-pwd"></span>
+            <button onclick="validar()">Validar</button>
+        </div>
     </div>
-    <div>
-        <input type="password" name="" id="iContraseña" placeholder="Contraseña">
-    </div>
-    <div>
-        <button onclick="validar()">Validar</button>
-    </div>
+    
 </body>
 </html>
 <script>
@@ -22,17 +23,59 @@
     {
         let email=document.getElementById("iEmail").value;
         let password=document.querySelector("#iContraseña").value;
+        //Hacemos lo mismo con querySelector que con getElementById
         console.log(email, password);
-        if (email.lastIndexOf("@")<0);
+
+        //Validación del email
+        
+        //Utilizando expresiones regulares:
+        //if (/[@][.]/.test)
+        if (email.lastIndexOf("@")<0)
         //esta estructura se llama estructura de control
         {
-            console.error("El email no contiene @");
+            escribirError("Falta el símbolo @","#error-email");
         }
-        let c2=email.lastIndexOf(".");
-        console.log(c2);
-        let c3=password.lastIndexOf("A");
-        console.log(c3);
-        let c4=password.lastIndexOf("a");
-        console.log(c4);
+        else if (email.lastIndexOf(".")<0)
+        {
+            escribirError("Falta el punto","#error-email");
+            
+        }
+        else if (email.length<6)
+        {
+            escribirError("La longitud del e-mail es insuficiente", "#error-email");
+        }
+        else {
+            escribirError("", "#error-email");
+        }
+
+        //Validación de la contraseña
+        if (/[Aa]/.test(password))
+        {
+            escribirError("La contraseña no puede incluir A ni a", "#error-pwd");
+        }
+        else if (password.length<7)
+        {
+            escribirError("La contraseña tiene que tener más de 6 caracteres", "#error-pwd");
+        }
+        // Otra forma de hacerlo: if (password.toUpperCase().includes('A'))//Encadenado de métodos
+        //{
+            //escribirError("La contraseña tiene A", "#error-pwd");
+        //}
+        //if (password.includes("A")==false)//también valdría (!email.includes("A")), que sería lo
+        //mismo pero en negación
+        else if (/[Ii][Bb][Mm]/.test(password))
+        {
+            escribirError("La contraseña no puede incluir IBM", "#error-pwd");
+        }
+        else
+        {
+            escribirError("", "#error-pwd");
+        }
+    }
+
+
+    function escribirError(mensaje, identificador)
+    {
+        document.querySelector(identificador).innerHTML=mensaje;
     }
 </script>

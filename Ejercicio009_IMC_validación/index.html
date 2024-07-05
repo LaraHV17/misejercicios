@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calculadoraIMC.js"></script>
+</head>
+
+<body>
+    <div id="principal">
+        <div class="contenido">
+            <input type="text" name="" id="iNombre" placeholder="Nombre">
+            <span class="error" id="error-nombre"></span>
+        </div>
+        <div class="contenido">
+            <input type="number" name="" id="edad" placeholder="Edad">
+            <span class="error" id="error-edad"></span>
+        </div>
+        <div class="contenido">
+            <input type="number" name="" id="iAltura" placeholder="Altura">
+            <span class="error" id="error-altura"></span>
+        </div>
+        <div class="contenido">
+            <input type="number" name="" id="iPeso" placeholder="Peso">
+            <span class="error" id="error-peso"></span>
+        </div>
+        <div class="contenido">
+            <button onclick="validar()">Calcular IMC</button>
+            <!-- Nos llama a la función validar -- -->
+        </div>
+        <div id="resultado" class="contenido">
+            Resultado
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    
+    function validar() 
+    {
+        let nombre = document.getElementById("iNombre").value;
+        let edad = document.getElementById("edad").value;
+        let altura = document.getElementById("iAltura").value;
+        console.log(altura);
+        let peso = document.getElementById("iPeso").value;
+        console.log(peso);
+        //Validación nombre
+        if (nombre.length < 3) {
+            escribirError("El nombre debe incluir 3 o más caracteres", "#error-nombre");
+        }
+        else {
+            escribirError("", "#error-nombre");
+        }
+        //Validación edad
+        if (edad < 18) {
+            escribirError("Debes ser mayor de edad", "#error-edad");
+        }
+        else {
+            escribirError("", "#error-edad");
+        }
+        //Validación altura
+        if (altura < 100 || altura > 250) {
+            escribirError("La altura debe estar en el rango de 100 - 250 cm", "#error-altura");
+        }
+        else {
+            escribirError("", "#error-altura");
+        }
+        //Validación peso
+        if (peso < 40 || peso > 200) {
+            escribirError("El peso debe estar en el rango de 40 - 200 kg", "#error-peso")
+        }
+        else {
+            escribirError("", "#error-peso");
+        }
+        console.log (calcular(peso, altura));        
+    }
+
+    function calcular() 
+    {
+        let altura = document.getElementById("iAltura").value;
+        console.log(altura);
+        let peso = document.getElementById("iPeso").value;
+        console.log(peso);
+        let imc = calcularIMC(peso, altura);
+        console.log(imc);
+        document.getElementById("resultado").innerHTML = imc;
+        
+        //Peso inferior al normal
+        
+        
+        //Peso normal
+
+        //Peso superior al normal
+        //Obesidad
+    }
+
+    function escribirError(mensaje, identificador) {
+        document.querySelector(identificador).innerHTML = mensaje;
+    }
+
+    
+
+</script>
