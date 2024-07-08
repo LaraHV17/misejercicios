@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cover"><img src="./images/cover1.jpg"></div>
+    <div class="cover"><img src="./images/cover2.jpg"></div>
+    <div class="cover"><img src="./images/cover3.jpg"></div>
+    <div class="cover"><img src="./images/cover4.jpg"></div>
+    <div class="cover"><img src="./images/cover5.jpg"></div>
+    <div class="cover"><img src="./images/cover6.jpg"></div>
+    <div><button id="botonMas" onclick="aumentar">+</button>
+        <button id="botonMenos">-</button>
+    </div>
+</body>
+
+</html>
+<script>
+    let ancho=200;
+    function aumentar () {
+        ancho++;
+        let caratulas = document.getElementsByClassName("cover");
+        Array.from(caratulas).forEach(caratula => {
+            //caratula.style.width=ancho+"px";//Concatenando cadenas
+            caratula.style.width=`${ancho}px`;//Interpolación de cadenas
+        })
+        
+    }
+    
+    document.querySelector("#botonMenos").addEventListener("click", function () {
+        //el elemento botonMenos escucha el evento "click" y hace la siguiente "function"
+
+    });
+
+
+
+</script>
