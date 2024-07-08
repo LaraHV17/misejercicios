@@ -1,25 +1,66 @@
-#principal {
-    font-family: fantasy;
-    width: 200px;
-    background-color: rgb(230, 222, 236);
-    border: rgb(205, 170, 240) 2px solid;
-    border-radius: 4px;
-    padding: 5px;
-    /* Separa al div de la línea con la que hemos rodeado el div (nos da espacio hacia dentro) */
-    margin: auto;
-
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    background-color: #f7f7f7;
+    color: #333;
 }
 
-.contenido {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 2px;
-    /*Añade márgenes entre los div que hemos clasificado como contenido*/
-    text-align: center;
-    /*Centra todos los div de clase contenido*/
+input, button, span {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Estilos para el contenedor principal */
+body {
+    max-width: 600px;
+    margin: auto;
+}
+
+.error{
+    color: rgb(240, 71, 71);
 }
 
 input {
-    padding: 5px;
-    /* Da un márgen a lo que se introduce en el div en la página web
-    Por ejemplo, que "Lara" tenga un margen con la cajita donde lo escribimos */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+span#resultado, span#error {
+    font-weight: bold;
+    color: #d9534f; /* Color rojo para el error */
+}
+
+span#resultado {
+    color: #5cb85c; /* Color verde para el resultado */
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    input, button, span {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
