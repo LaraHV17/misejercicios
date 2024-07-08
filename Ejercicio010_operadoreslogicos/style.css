@@ -1,0 +1,17 @@
+.cuadrado {
+    background-color: rgb(191, 191, 191);
+    width: 100px;
+    height: 100px;
+    float: left;
+    /* agrupa los div de izquierda a derecha en lugar de uno debajo de otro*/
+    margin: 10px;
+}
+
+
+.verde {
+background-color: rgb(141, 184, 141);
+}
+
+.rojo {
+background-color: rgb(225, 105, 105);
+}
