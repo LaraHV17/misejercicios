@@ -9,15 +9,16 @@
 </head>
 
 <body>
+    <div>
+        <button id="botonMas" onclick="aumentar()">+</button>
+        <button id="botonMenos">-</button>
+    </div>
     <div class="cover"><img src="./images/cover1.jpg"></div>
     <div class="cover"><img src="./images/cover2.jpg"></div>
     <div class="cover"><img src="./images/cover3.jpg"></div>
     <div class="cover"><img src="./images/cover4.jpg"></div>
     <div class="cover"><img src="./images/cover5.jpg"></div>
-    <div class="cover"><img src="./images/cover6.jpg"></div>
-    <div><button id="botonMas" onclick="aumentar">+</button>
-        <button id="botonMenos">-</button>
-    </div>
+    <div class="cover"><img src="./images/cover6.jpg"></div>    
 </body>
 
 </html>
@@ -35,7 +36,11 @@
     
     document.querySelector("#botonMenos").addEventListener("click", function () {
         //el elemento botonMenos escucha el evento "click" y hace la siguiente "function"
-
+        ancho--;
+        let caratulas = document.querySelectorAll(".cover");
+        Array.from(caratulas).forEach(caratula => {
+            caratula.style.width=`${ancho}px`;
+        })
     });
 
 
