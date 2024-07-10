@@ -61,6 +61,10 @@ console.log(resultado);
 let find1=nombres.find((nombre) => nombre.length<4);
 console.log(find1);
 
+//Some - indica si hay elementos que cumplen la condición
+let nombresLargos = nombres.some(nombre =>  nombre.length>10);
+console.log(nombresLargos);
+
 //Sort - ordena
 let numeros = [3, 4, 7, -1, 6, 8];
 let numerosOrdenados=numeros.sort();
@@ -72,10 +76,6 @@ function compararNumeros(n1, n2)
 {
     return Math.abs(n2)-Math.abs(n1);
 }
-
-//Some - indica si hay elementos que cumplen la condición
-let nombresLargos = nombres.some(nombre =>  nombre.length>10);
-console.log(nombresLargos);
 
 
 //Concat
