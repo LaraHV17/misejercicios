@@ -76,8 +76,3 @@ function compararNumeros(n1, n2)
 {
     return Math.abs(n2)-Math.abs(n1);
 }
-
-
-//Concat
-//Includes
-//Join
