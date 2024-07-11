@@ -1,0 +1,16 @@
+#bAgregar
+{
+    background-color: rgb(166, 166, 246);
+    color: white;
+}
+
+.pelicula {
+    float: left;
+    width: 300px;
+    height: 450px;
+    background-color: rgb(166, 144, 188);
+    margin: 10px;
+}
+.pelicula img {
+    width: 100%;
+}
