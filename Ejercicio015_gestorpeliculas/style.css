@@ -1,16 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
 #bAgregar
 {
-    background-color: rgb(166, 166, 246);
+    background-color: rgb(122, 180, 164);
     color: white;
 }
 
 .pelicula {
+    padding: 20px;
     float: left;
     width: 300px;
-    height: 450px;
-    background-color: rgb(166, 144, 188);
+    height: 530px;
+    background-color: rgb(149, 121, 178);
+    color: white;
     margin: 10px;
+    border-radius: 10px;
 }
 .pelicula img {
+    margin-top: 30px;
     width: 100%;
+}
+
+.titulo-peli {
+    font-size: 1.25em;
+    text-decoration: underline;
+}
+
+#formulario {
+    width: 100%;
+    text-align: center;
+}
+
+#div-guardar {
+    padding: 1em 0em 1em 0em;
+    width: 100%;
+    text-align: center;
+}
+
+#div-guardar button {
+    background-color: rgb(139, 86, 86);
+    color: white;
+}
+
+input, button {
+    padding: 1em;
+    border-radius: 5px;
 }

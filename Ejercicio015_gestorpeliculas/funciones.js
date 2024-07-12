@@ -1,7 +1,14 @@
 let peliculas = new Array();
+//let peliculas = [];//Construcción alternativa del Array
 
 //Recuperar de localStorage los destinos almacenados
-
+let peliculasAlmacenadas = localStorage.getItem("peliculas");//peliculas es como llamamos
+//a lo que guardamos
+if (peliculasAlmacenadas!=null)
+{
+    peliculas = JSON.parse(peliculasAlmacenadas);
+    crearListadoPeliculas(peliculas);
+}
 //Fin de recuperar de localStorage
 
 document.querySelector("#bAgregar").addEventListener("click", (event) => {
@@ -22,6 +29,7 @@ document.querySelector("#bAgregar").addEventListener("click", (event) => {
 function crearListadoPeliculas(peliculas) {
     let htmlPeliculas = "";
     peliculas.map((pelicula) => {
+        //+= añade las peliculas una al lado de otra
         htmlPeliculas += `<div class="pelicula">
         <div class="titulo-peli">${pelicula.titulo}</div>
         <div class="genero-peli">${pelicula.genero}</div>
@@ -41,5 +49,10 @@ function crearListadoPeliculas(peliculas) {
 };
 
 //Guardar las peliculas en localStorage
-
+document.querySelector("#bGuardar").addEventListener("click", guardar);
+function guardar() {
+    let strPeliculas = JSON.stringify(peliculas);
+    localStorage.setItem("peliculas", strPeliculas);//peliculas es al nombre que le damos a
+    //ese almacenamiento<
+}
 //Fin de guardar las peliculas
