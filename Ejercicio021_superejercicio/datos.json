@@ -1,0 +1,56 @@
+[{
+    "titulo" : "A Quiet Place : Day One",
+    "genero" : "Thriller",
+    "director" : "Michael Sarnoski",
+    "actores" : {
+        "actorprincipal1": "Lupita Nyong'o",
+        "actorprincipal2" : "Joseph Quinn",
+        "actorsecundario" : "Alex Wolff"
+    },
+    "año" : "2024",
+    "pais" : "EEUU",
+    "idioma" : "Inglés",
+    "poster" : "https://m.media-amazon.com/images/M/MV5BNGZmODU3ZDEtMjQwZC00NTA5LThmNWYtYzk5MmY5ZmM4NGIxXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+},
+{
+    "titulo" : "Inside Out 2",
+    "genero" : "Comedia",
+    "director" : "Kelsey Mann",
+    "actores" : {
+        "actorprincipal1": "Amy Poehler",
+        "actorprincipal2" : "Maya Hawke",
+        "actorsecundario" : "Kensington Tallman"
+    },
+    "año" : "2024",
+    "pais" : "EEUU",
+    "idioma" : "Inglés",
+    "poster" : "https://lumiere-a.akamaihd.net/v1/images/image_26964b90.jpeg?region=0,0,540,810"
+},
+{
+    "titulo" : "Saltburn",
+    "genero" : "Comedia",
+    "director" : "Emerald Fennell",
+    "actores" : {
+        "actorprincipal1": "Barry Keoghan",
+        "actorprincipal2" : "Jacob Elordi",
+        "actorsecundario" : "Rosamund Pike"
+    },
+    "año" : "2023",
+    "pais" : "UK",
+    "idioma" : "Inglés",
+    "poster" : "https://pics.filmaffinity.com/Saltburn-405752716-large.jpg"
+},
+{
+    "titulo" : "Romeo + Juliet",
+    "genero" : "Romance",
+    "director" : "Baz Luhrmann",
+    "actores" : {
+        "actorprincipal1": "Leonardo DiCaprio",
+        "actorprincipal2" : "Claire Danes",
+        "actorsecundario" : "Jess Bradford"
+    },
+    "año" : "1996",
+    "pais" : "Australia",
+    "idioma" : "Inglés",
+    "poster" : "https://pics.filmaffinity.com/Romeo_Julieta_de_William_Shakespeare-380564170-large.jpg"
+}]
