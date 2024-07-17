@@ -1,0 +1,42 @@
+[
+    {
+        "titulo": "Call of Duty",
+        "plataforma": "PS4",
+        "fecha": 1999,
+        "caratula" : "https://s.pacn.ws/1/p/vn/call-of-duty-modern-warfare-remastered-569653.1.jpg",
+        "localidad":{
+            "ciudad" : "Los Angeles",
+            "pais" : "Estado Unidos"
+        }
+    },
+    {
+        "titulo": "Los Simpsons",
+        "plataforma": "Xbox 360",
+        "fecha": 2002,
+        "caratula" : "https://i.ebayimg.com/images/g/R0UAAMXQjwVQ9yY~/s-l640.jpg",
+        "localidad":{
+            "ciudad" : "Madrid",
+            "pais" : "España"
+        }
+    },
+    {
+        "titulo": "Uncharted 4",
+        "plataforma": "PlayStation 4",
+        "fecha": 2010,
+        "caratula" : "https://m.media-amazon.com/images/I/713God7yV7S.jpg",
+        "localidad":{
+            "ciudad" : "Vancouver",
+            "pais" : "Canadá"
+        }
+    },
+    {
+        "titulo": "Fortnite",
+        "plataforma": "Nintendo switch",
+        "fecha": 2018,
+        "caratula": "https://ultimainformatica.com/1166583-thickbox_default/warner-bros-games-fortnite-pack-froid-eternel-bundle-nintendo-switch.jpg",
+        "localidad":{
+            "ciudad" : "Nueva York",
+            "pais" : "Estados Unidos"
+        }
+    }
+]

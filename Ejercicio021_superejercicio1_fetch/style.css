@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+}
+#juegos {
+    display: flex;
+    flex-wrap: wrap;
+}
+.juego {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(240, 153, 3);
+}
+.titulo {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.plataforma {
+    color: #555;
+    margin-bottom: 10px;
+}
+.imagen img {
+    max-width: 100%;
+    height: auto;
+}
