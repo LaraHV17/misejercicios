@@ -22,3 +22,8 @@ setInterval(() => {
         x2 = Math.random() * window.innerWidth;
     }
 }, RATIO);
+
+document.querySelector("#bCerrar").addEventListener("click", () => {
+    document.querySelector("footer").style.bottom = "-100px";
+    document.querySelector("footer").style.opacity = 0;
+})
