@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Classlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Span es como un div, pero sin crear una caja nueva. Sirve para diferenciar 
+     un elemento de un párrafo, por ejemplo, sin que haga un salto de línea -->
+    <span id="mensaje">Introduce el nombre:</span>
+    <input type="text" id="nombre" placeholder="Nombre">
+
+</body>
+
+</html>
+<script>
+    document.querySelector("#nombre").addEventListener("keyup", (evento) => {
+        const texto = document.querySelector("#nombre").value;
+        if (texto.length >= 5) {
+            document.querySelector("#mensaje").classList.add("rojo");
+        } else {
+            document.querySelector("#mensaje").classList.remove("rojo");
+        }
+        if (texto.length >= 7) {
+            document.querySelector("#mensaje").classList.add("negrita");
+        } else {
+            document.querySelector("#mensaje").classList.remove("negrita");
+        }
+        if (texto.length >= 10) {
+            document.querySelector("#mensaje").classList.replace("rojo", "verde");
+        } else {
+            document.querySelector("#mensaje").classList.replace("verde", "rojo");
+        }
+    })
+    //keypress está obsoleto. beforeinput o keydown es el nuevo. Sirve para que cuando 
+    //escribimos algo en el id nombre, el span cambie (o el evento que queremos que pase).
+    //classList accede a las clases.
+    //keydown acciona el evento cuando pulsas la letra. keyup cuando la sueltas.
+</script>

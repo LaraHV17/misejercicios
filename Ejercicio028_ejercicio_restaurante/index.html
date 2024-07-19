@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurantes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="restaurantes">
+
+        <div class="restaurante">
+            <div class="imagen">
+                <img src="./images/hakuna_matata_veggie.jpg">
+            </div>
+            <div class="descripción">
+                <div class="nombre">Hakuna Matata</div>
+                <div class="tipo">Mediterránea</div>
+                <div class="direccion">C. de Galileo, 12, Chamberí, 28015, Madrid</div>
+                <div class="precio">Precio por persona 20 - 30 €</div>
+            </div>
+
+        </div>
+        <hr>
+
+        <div class="restaurante">
+            <div class="imagen">
+                <img src="images/mad_mad_vegan.jpg">
+            </div>
+            <div>
+                <h1>Mad Mad Vegan</h1>
+                <p>C. de Lavapiés, 16, 28012, Madrid</p>
+                <p>Precio por persona 15 - 20 €</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    function crearFila(imagen, nombre, tipo, direccion, precio) {
+        //div clase restaurante
+        let divRestaurante = document.createElement("div");
+        divRestaurante.classList.add("restaurante");
+        document.querySelector("#restaurantes").appendChild(divRestaurante);
+        //div imagen
+        let divImagen = document.createElement("div");
+        divImagen.classList.add("imagen");
+        divRestaurante.appendChild(divImagen);
+        //img src
+        let imgRestaurante = document.createElement("img");
+        imgRestaurante.src = imagen;
+        divImagen.appendChild(imgRestaurante);
+        //descripción
+    }
+
+    crearFila("./images/hakuna_matata_veggie.jpg", "Hakuna Matata", "Mediterránea", "Precio por persona 20 - 30 €")
+</script>

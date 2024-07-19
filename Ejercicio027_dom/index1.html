@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de elementos en DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let encabezado = document.createElement("h1");
+    //Así solo esto crea un elemento h1 sin adjudicar a ninguna parte del document.
+    //Para meterlo en el body:
+    document.querySelector("body").appendChild(encabezado);
+    //Con esto hacemos que encabezado sea "hijo" del body.
+
+    //Con esto creamos un texto.
+    let textoEncabezado = document.createTextNode("Sección principal");
+    encabezado.appendChild(textoEncabezado);
+
+    //Para darle una clase al elemento h1 - Creación del atributo creando el elemento
+    let atributoEncabezado = document.createAttribute("class");
+    atributoEncabezado.value = "rojo";
+    encabezado.setAttributeNode(atributoEncabezado);
+    //Creación del atributo mediante el método setAttribute
+    encabezado.setAttribute("id", "encabezado1");
+
+    //Para que el encabezado cambie de color cada cierto tiempo:
+
+    setInterval(() => {
+        /*Antiguamente:
+           if (atributoEncabezado.value === "verde") {
+               atributoEncabezado.value = "rojo";
+           } else {
+               atributoEncabezado.value = "verde";
+           }*/
+        //Ahora:
+        atributoEncabezado.value = (atributoEncabezado.value === "verde") ? "rojo" : "verde";
+        /*Esta expresión ternaria nos dice que si el atributoEncabezado.value es verde (? 
+        pregunta si es lo de entre paréntesis es cierto), le da el valor rojo en el 
+        intervalo definido, y si no (:) le da el valor verde.
+        */
+    }, 3000);
+</script>
