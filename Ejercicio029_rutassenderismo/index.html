@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas de Senderismo por Aragón</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="rutas"></div>
+</body>
+
+</html>
+<script src="scripts/http-client.js"></script>
+<script src="scripts/generador_filas.js"></script>
+<script>
+    var arrayRutas;
+
+    doGetHTTPRequest("http://127.0.0.1", "5500", "/senderos_aragon.json", procesarRutas,
+        procesarError);
+
+    function procesarRutas(texto) {
+        let objetoServidor = JSON.parse(texto);
+        arrayRutas = objetoServidor.rutas;
+        arrayRutas.forEach(ruta => {
+            crearFila(ruta.name,
+                ruta.itinerary,
+                ruta.horizontal_distance,
+                ruta.mide_difficulty);
+        });
+        console.log("Paso 1");
+    }
+
+    function procesarError(err) {
+        console.error(err);
+    }
+</script>

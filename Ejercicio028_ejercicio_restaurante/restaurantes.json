@@ -1,0 +1,25 @@
+{
+    "restaurantes": [
+        {
+            "imagen": "./images/hakuna_matata_veggie.jpg",
+            "nombre": "Hakuna Matata Veggie",
+            "tipo": "Mediterránea Vegana",
+            "direccion": "C. de Galileo, 12, Chamberí, 28015, Madrid",
+            "precio": "20 - 30 €"
+        },
+        {
+            "imagen": "./images/mad_mad_vegan.jpg",
+            "nombre": "Mad Mad Vegan",
+            "tipo": "Americana Vegana",
+            "direccion": "C. de Lavapiés, 16, 28012, Madrid",
+            "precio": "15 - 20 €"
+        },
+        {
+            "imagen": "./images/yoshi_hokkaido.jpg",
+            "nombre": "Yoshi Hokkaido",
+            "tipo": "Japonesa Vegana",
+            "direccion": "Av. de Menéndez Pelayo, 9, Retiro, 28009 Madrid",
+            "precio": "20 - 30 €"
+        }
+    ]
+}
