@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <div id="buscador">
+        <input type="text" id="iFiltro" placeholder="Flitrar por dificultad">
+    </div>
     <div id="rutas"></div>
 </body>
 
@@ -18,19 +21,48 @@
 <script>
     var arrayRutas;
 
+    document.querySelector("#iFiltro").addEventListener("keyup", () => {
+        console.log("paso 1");
+        let texto = document.querySelector("#iFiltro").value;
+        let rutasFiltradas = arrayRutas.filter((ruta) => {
+            return ruta.mide_difficulty == texto;
+        });
+        console.log("paso 2");
+        document.querySelector("#rutas").innerHTML = "";
+        /* Más extenso y repetitivo
+            rutasFiltradas.forEach(ruta => {
+                crearFila(ruta.name,
+                    "Itinerario: " + ruta.itinerary,
+                    "Distancia (m): " + ruta.horizontal_distance,
+                    "Dificultad: " + ruta.mide_difficulty);
+        });*/
+        generarFilasRutas(rutasFiltradas);
+        console.log("paso 3");
+    })
+
     doGetHTTPRequest("http://127.0.0.1", "5500", "/senderos_aragon.json", procesarRutas,
         procesarError);
+
+    function generarFilasRutas(rutas) {
+        rutas.forEach(ruta => {
+            crearFila(ruta.name,
+                "Itinerario: " + ruta.itinerary,
+                "Distancia (m): " + ruta.horizontal_distance,
+                "Dificultad: " + ruta.mide_difficulty);
+        });
+    }
 
     function procesarRutas(texto) {
         let objetoServidor = JSON.parse(texto);
         arrayRutas = objetoServidor.rutas;
-        arrayRutas.forEach(ruta => {
+        generarFilasRutas(arrayRutas)
+        /*arrayRutas.forEach(ruta => {
             crearFila(ruta.name,
-                ruta.itinerary,
-                ruta.horizontal_distance,
-                ruta.mide_difficulty);
-        });
-        console.log("Paso 1");
+                "Itinerario: " + ruta.itinerary,
+                "Distancia (m): " + ruta.horizontal_distance,
+                "Dificultad: " + ruta.mide_difficulty);
+        });*/
+        console.log("Paso 4");
     }
 
     function procesarError(err) {
